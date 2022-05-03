@@ -1,9 +1,11 @@
-image: gitpod/workspace-dotnet
+image:
+  file: .gitpod.Dockerfile
 
 tasks:
   - name: Init
     init: |
       dotnet dev-certs https 
+      dotnet restore
 
 vscode:
   extensions:
